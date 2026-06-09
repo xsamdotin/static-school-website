@@ -1,21 +1,21 @@
-import Header from "./components/Header";
 import Hero from "./components/Hero";
-import About from "./components/About";
-import Academics from "./components/Academics";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import DirectorMessage from "./components/DirectorMessage";
+import NoticeBoard from "./components/NoticeBoard";
+import Stats from "./components/Stats";
+import WhoWeAre from "./components/WhoWeAre";
+import WhyChooseUs from "./components/WhyChooseUs";
+import CoreValues from "./components/CoreValues";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Academics />
-        <Contact />
-      </main>
-      <Footer />
+      <Hero />
+      <DirectorMessage />
+      <NoticeBoard />
+      <Stats />
+      <WhoWeAre />
+      <WhyChooseUs />
+      <CoreValues />
     </>
   );
 }

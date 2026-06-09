@@ -1,101 +1,251 @@
-const programs = [
-  {
-    name: "Primary School",
-    grades: "Grades 1–5",
-    desc: "Foundational learning with focus on literacy, numeracy, and creative exploration in a nurturing environment.",
-  },
-  {
-    name: "Middle School",
-    grades: "Grades 6–8",
-    desc: "Broad-based curriculum fostering analytical thinking, scientific curiosity, and collaborative skills.",
-  },
-  {
-    name: "High School",
-    grades: "Grades 9–12",
-    desc: "Advanced coursework with streams in Science, Commerce, and Arts, preparing students for higher education.",
-  },
-  {
-    name: "STEM Program",
-    grades: "Elective",
-    desc: "Hand-on learning in robotics, coding, and design thinking to build future-ready problem solvers.",
-  },
+const forms = [
+  "TC Application Form",
+  "Request For Bonafide certificate",
+  "Application for Transport facility",
+  "Request for updating Residential Address",
+  "Request for updating Phone No.",
+  "Request for updating Email ID",
 ];
 
-const activities = [
-  { name: "Sports & Athletics", color: "bg-blue-500" },
-  { name: "Music & Performing Arts", color: "bg-amber-500" },
-  { name: "Debate & Public Speaking", color: "bg-emerald-500" },
-  { name: "Art & Craft", color: "bg-rose-500" },
-  { name: "Community Service", color: "bg-violet-500" },
-  { name: "Science Club", color: "bg-cyan-500" },
+const fas = [
+  { label: "FA1", name: "Formative Assessment 1", month: "May" },
+  { label: "FA2", name: "Formative Assessment 2", month: "August" },
+  { label: "FA3", name: "Formative Assessment 3", month: "November" },
+  { label: "FA4", name: "Formative Assessment 4", month: "January" },
+];
+
+const sas = [
+  { label: "SA1", name: "Summative Assessment 1", month: "September" },
+  { label: "SA2", name: "Summative Assessment 2 (Annual)", month: "March" },
+];
+
+const days = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
+
+const periods = [
+  { period: "1st", time: "10:00 - 10:45" },
+  { period: "2nd", time: "10:45 - 11:30" },
+  { period: "3rd", time: "11:30 - 12:15" },
+  { period: "4th", time: "12:15 - 01:00" },
+  { period: "Break(Recess)", time: "01:00 - 01:30" },
+  { period: "5th", time: "01:30 - 02:15" },
+  { period: "6th", time: "02:15 - 03:00" },
+  { period: "7th", time: "03:00 - 03:30" },
 ];
 
 export default function Academics() {
   return (
-    <section id="academics" className="bg-white py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">
-            Academics
-          </p>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-primary">
-            Comprehensive Academic Programs
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-gray-500 leading-relaxed">
-            From foundational learning to specialized streams, our curriculum is
-            designed to inspire intellectual growth and academic excellence at
-            every stage.
-          </p>
+    <>
+      <section className="bg-white pt-20 pb-16 sm:pt-28 sm:pb-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent">
+              Academics
+            </p>
+            <h1 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-primary">
+              Academic Program
+            </h1>
+            <p className="mx-auto mt-4 max-w-2xl text-gray-500 leading-relaxed">
+              We follow a rigorous curriculum designed to challenge students and
+              foster a love for learning.
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          {programs.map((program) => (
-            <div
-              key={program.name}
-              className="group rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-primary/20 hover:shadow-lg"
-            >
-              <div className="flex items-start justify-between">
-                <h3 className="text-lg font-semibold text-primary">
-                  {program.name}
-                </h3>
-                <span className="rounded-full bg-primary/5 px-3 py-1 text-xs font-medium text-primary-light">
-                  {program.grades}
-                </span>
-              </div>
-              <p className="mt-3 text-sm text-gray-500 leading-relaxed">
-                {program.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-16 relative overflow-hidden rounded-2xl bg-primary p-8 sm:p-12">
-          <img
-            src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&q=80"
-            alt="Students in activity"
-            className="absolute inset-0 h-full w-full object-cover opacity-15"
-          />
-          <div className="relative">
-          <h3 className="text-2xl font-bold text-white">
-            Beyond the Classroom
-          </h3>
-          <p className="mt-3 text-white/70">
-            We believe in nurturing every aspect of a student&apos;s personality
-            through a wide range of co-curricular activities.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            {activities.map((a) => (
-              <span
-                key={a.name}
-                className={`${a.color} rounded-full px-4 py-1.5 text-sm font-medium text-white`}
+      <section className="bg-surface py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-primary">
+              Forms &amp; Documents
+            </h2>
+            <p className="mt-2 text-gray-500">
+              Download important forms and certificates
+            </p>
+          </div>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {forms.map((form, i) => (
+              <div
+                key={form}
+                className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-4 transition-shadow hover:shadow-md cursor-pointer"
               >
-                {a.name}
-              </span>
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-sm font-bold text-accent">
+                  {i + 1}
+                </div>
+                <span className="text-sm font-medium text-gray-700">
+                  {form}
+                </span>
+                <svg
+                  className="ml-auto h-4 w-4 shrink-0 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                  />
+                </svg>
+              </div>
             ))}
           </div>
         </div>
-      </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-primary">
+              CBSE Assessment System
+            </h2>
+            <p className="mt-2 text-gray-500">
+              Formative and Summative Assessments as per CBSE guidelines
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <h3 className="text-lg font-semibold text-primary">
+              Formative Assessments (FA)
+            </h3>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {fas.map((fa) => (
+                <div
+                  key={fa.label}
+                  className="rounded-xl border border-gray-200 bg-surface p-5 text-center"
+                >
+                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-lg font-bold text-accent">
+                    {fa.label}
+                  </div>
+                  <p className="mt-3 text-sm font-semibold text-primary">
+                    {fa.name}
+                  </p>
+                  <p className="mt-1 text-xs text-gray-400">{fa.month}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10">
+            <h3 className="text-lg font-semibold text-primary">
+              Summative Assessments (SA)
+            </h3>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              {sas.map((sa) => (
+                <div
+                  key={sa.label}
+                  className="rounded-xl border border-gray-200 bg-surface p-5 text-center"
+                >
+                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-lg font-bold text-accent">
+                    {sa.label}
+                  </div>
+                  <p className="mt-3 text-sm font-semibold text-primary">
+                    {sa.name}
+                  </p>
+                  <p className="mt-1 text-xs text-gray-400">{sa.month}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-8 rounded-xl border border-accent/20 bg-accent/5 p-5 text-sm text-gray-600 leading-relaxed">
+            <strong>Note:</strong> The results of all Formative &amp; Summative
+            Assessments are communicated to parents/guardians through Progress
+            Report Cards according to the latest CBSE guidelines and examination
+            specifications.
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-surface py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-primary">
+              Bell Schedule
+            </h2>
+            <p className="mt-2 text-gray-500">
+              Daily time slots for academic sessions
+            </p>
+          </div>
+
+          <div className="mt-10 overflow-x-auto">
+            <div className="flex gap-2 mb-4 flex-wrap">
+              {days.map((day) => (
+                <span
+                  key={day}
+                  className={`rounded-full px-4 py-1.5 text-xs font-medium ${
+                    day === "Sunday"
+                      ? "bg-red-100 text-red-600"
+                      : day === "Saturday"
+                        ? "bg-blue-100 text-blue-600"
+                        : "bg-primary/10 text-primary"
+                  }`}
+                >
+                  {day}
+                </span>
+              ))}
+            </div>
+
+            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-sm">
+              <thead>
+                <tr className="bg-primary">
+                  <th className="px-5 py-3 text-left text-sm font-semibold text-white">
+                    Period
+                  </th>
+                  <th className="px-5 py-3 text-left text-sm font-semibold text-white">
+                    Time
+                  </th>
+                  <th className="hidden sm:table-cell px-5 py-3 text-left text-sm font-semibold text-white">
+                    Monday – Friday
+                  </th>
+                  <th className="hidden sm:table-cell px-5 py-3 text-left text-sm font-semibold text-white">
+                    Saturday
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {periods.map((p, i) => (
+                  <tr
+                    key={p.period}
+                    className={`border-b border-gray-100 ${
+                      p.period === "Break(Recess)"
+                        ? "bg-accent/5"
+                        : i % 2 === 0
+                          ? "bg-white"
+                          : "bg-gray-50"
+                    }`}
+                  >
+                    <td className="px-5 py-3 text-sm font-medium text-gray-700">
+                      {p.period}
+                    </td>
+                    <td className="px-5 py-3 text-sm text-gray-500">
+                      {p.time}
+                    </td>
+                    <td className="hidden sm:table-cell px-5 py-3 text-sm text-gray-500">
+                      {p.period === "Break(Recess)" ? "Recess" : "Regular Class"}
+                    </td>
+                    <td className="hidden sm:table-cell px-5 py-3 text-sm text-gray-500">
+                      {p.period === "Break(Recess)" ? "Recess" : "Regular Class"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+
+            <p className="mt-4 text-center text-xs text-gray-400">
+              Sunday: Holiday
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
